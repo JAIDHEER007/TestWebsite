@@ -1,10 +1,18 @@
 <html>
 <head>
 <title>This is a test website</title>
+<script type="text/javascript">
+   function generateRandomColor()
+	{
+		var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+		var target = document.getElementById("ascii-art");
+		target.style.color = randomColor;
+	}
+</script>
 </head>
-<body>
+<body onload="generateRandomColor()">
 <h1 style="text-align:center">This is a test website created by <em>S.Jaidheer</em></h1>
-<h2 style="text-align:center"><pre>
+<h2 id="ascii-art" style="text-align:center"><pre>
    _____         _         _____ _____  _    _ ______ ______ _____  
   / ____|       | |  /\   |_   _|  __ \| |  | |  ____|  ____|  __ \ 
  | (___         | | /  \    | | | |  | | |__| | |__  | |__  | |__) |
